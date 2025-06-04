@@ -31,7 +31,7 @@ getitems= async ()=>{
           list.map((eachitem)=>((
             <li className='li'>
               <div className='cards'>
-                <img src={eachitem.img} className='ims'/>
+                <img src={eachitem.img} className='ims' alt={"image?"}/>
                 <h3>{eachitem.name}</h3>
                 <p>{eachitem.bio}</p>
               </div>
