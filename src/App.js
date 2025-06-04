@@ -29,7 +29,7 @@ getitems= async ()=>{
       <div className='main'>
         <h1>Btech Trips</h1>
         {isloading ? (<><div className='loader'>
-      <ThreeDots color="#ffffff" height="50" width="80" /></div></>):(<>
+      <ThreeDots color="#000000" height="50" width="80" /></div></>):(<>
         <ul className='cont'>{
           list.map((eachitem)=>((
             <li className='li'>
