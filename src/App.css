@@ -70,3 +70,9 @@
   color:rgb(130, 6, 95);
   font-weight:600;
 }
+.loader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
