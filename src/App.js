@@ -1,25 +1,49 @@
-import logo from './logo.svg';
 import './App.css';
+import { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+
+  state={list:[]}
+
+componentDidMount(){
+  this.getitems()
 }
+
+getitems= async ()=>{
+  const api="https://apitesting-qcys.onrender.com/api/items"
+  const options = {
+      method: 'GET',
+    }
+    const response = await fetch(api,options)
+    if(response.ok===true){
+      const data = await response.json()
+      this.setState({list:data})
+      console.log(data)
+    }
+    
+}
+  render(){
+    const {list}=this.state
+    return(
+      <div className='main'>
+        <h1>Btech Trips</h1>
+        <ul className='cont'>{
+          list.map((eachitem)=>((
+            <li className='li'>
+              <div className='cards'>
+                <img src={eachitem.img} className='ims'/>
+                <h3>{eachitem.name}</h3>
+                <p>{eachitem.bio}</p>
+              </div>
+            </li>
+          )))}</ul>
+          <div>
+          <p className='pp'>Wanna Add More ? Click And Make Api Request</p><a href="https://apitesting-qcys.onrender.com/api/items">
+          <button className='btn'>Click</button></a></div>
+      </div>
+    )
+  }
+}
+
 
 export default App;

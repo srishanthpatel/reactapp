@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+.ims{
+  height: 250px;
+  border-radius: 15px;
+}
+.li{list-style: none;}
+.cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+}
+.cards{
+  margin: 20px;
+}
+.main{
+  text-align: center;
+  background-image: linear-gradient(to bottom,rgb(10, 128, 219),rgb(139, 197, 32));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.btn{
+  height: 25px;
+  width: 80px;
+  border-radius: 7px;
+  background-color: rgb(4, 89, 200);
+  color: white;
+  border: 0px;
+}
+.pp{
+  color:rgb(130, 6, 95);
+  font-weight:600;
+}
