@@ -37,7 +37,7 @@ getitems= async ()=>{
             </li>
           )))}</ul>
           <div>
-          <p className='pp'>Wanna Add More ? Click And Make Api Request</p><a href="https://apitesting-qcys.onrender.com/api/items">
+          <p className='pp'>Wanna Add More ? Click And Make Api Request</p><a href="https://apiposting.netlify.app/">
           <button className='btn'>Click</button></a></div>
       </div>
     )
